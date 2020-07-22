@@ -5,12 +5,14 @@ const testObject = {
 };
 
 function customObjectFreeze(object) {
-    for (key in object) {
-      Object.defineProperty(object, key, {
-        configurable: false,
-        writable: false
-      })
-    };
+
+  for (key in object) {
+    Object.defineProperty(object, key, {
+      configurable: false,
+      writable: false
+    })
+  };
+
   return object;
 };
 
